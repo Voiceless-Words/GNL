@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pragolan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/11 10:07:37 by pragolan          #+#    #+#             */
-/*   Updated: 2018/06/30 14:04:20 by pragolan         ###   ########.fr       */
+/*   Created: 2018/05/25 15:55:56 by pragolan          #+#    #+#             */
+/*   Updated: 2018/06/12 12:45:29 by pragolan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <sys/stat.h>
-# include <sys/types.h>
-# include <string.h>
-# include <fcntl.h>
-# include "libft/libft.h"
-# define BUFF_SIZE 2000
+#include "libft.h"
 
-int	get_next_line(const int fd, char **line);
-#endif
+void	*ft_memalloc(size_t size)
+{
+	unsigned char *str1;
+
+	if (!(str1 = (unsigned char *)malloc(size)))
+		return (NULL);
+	ft_memset(str1, 0, size);
+	return ((void *)str1);
+}

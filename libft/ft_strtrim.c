@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pragolan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/11 10:07:37 by pragolan          #+#    #+#             */
-/*   Updated: 2018/06/30 14:04:20 by pragolan         ###   ########.fr       */
+/*   Created: 2018/05/27 09:53:37 by pragolan          #+#    #+#             */
+/*   Updated: 2018/06/08 18:30:46 by pragolan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <sys/stat.h>
-# include <sys/types.h>
-# include <string.h>
-# include <fcntl.h>
-# include "libft/libft.h"
-# define BUFF_SIZE 2000
+#include "libft.h"
 
-int	get_next_line(const int fd, char **line);
-#endif
+char	*ft_strtrim(char const *str)
+{
+	size_t	len;
+	size_t	size;
+
+	if (str == NULL)
+		return (NULL);
+	len = 0;
+	size = 0;
+	while (*str == ' ' || *str == '\n' || *str == '\t')
+		str++;
+	if (ft_strcmp(str, "") == 0)
+		size = 0;
+	else
+		len = ft_strlen(str) - 1;
+	while (str[len] == ' ' || str[len] == '\n' || str[len] == '\t')
+		len--;
+	return (ft_strsub(str, 0, len + 1));
+}
