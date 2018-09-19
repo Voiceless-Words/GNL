@@ -6,7 +6,7 @@
 /*   By: pragolan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 10:07:37 by pragolan          #+#    #+#             */
-/*   Updated: 2018/06/30 14:04:20 by pragolan         ###   ########.fr       */
+/*   Updated: 2018/07/05 15:46:03 by pragolan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <fcntl.h>
 # include "libft/libft.h"
-# define BUFF_SIZE 2000
+# define BUFF_SIZE 50000
 
 int	get_next_line(const int fd, char **line);
 #endif

@@ -6,7 +6,7 @@
 /*   By: pragolan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 12:58:34 by pragolan          #+#    #+#             */
-/*   Updated: 2018/06/15 12:30:58 by pragolan         ###   ########.fr       */
+/*   Updated: 2018/07/06 12:03:18 by pragolan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <sys/stat.h>
+# include <sys/types.h>
+# include <fcntl.h>
+# define BUFF_SIZE 1
 
+int		get_next_line(const int fd, char **line);
 void	*ft_memset(void *str, int c, size_t len);
 void	ft_bzero(void *str, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

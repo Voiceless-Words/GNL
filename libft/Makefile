@@ -6,7 +6,7 @@
 #    By: pragolan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/27 17:11:12 by pragolan          #+#    #+#              #
-#    Updated: 2018/06/15 17:13:24 by pragolan         ###   ########.fr        #
+#    Updated: 2018/07/06 12:01:46 by pragolan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c\
 	   ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c\
 	   ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 	   ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
-	   ft_isalnum.c ft_memccpy.c\
+	   ft_isalnum.c ft_memccpy.c get_next_line.c\
 
 SRCO = $(SRCC:.c=.o)
 

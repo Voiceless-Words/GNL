@@ -6,11 +6,11 @@
 /*   By: pragolan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 10:10:43 by pragolan          #+#    #+#             */
-/*   Updated: 2018/06/30 14:31:18 by pragolan         ###   ########.fr       */
+/*   Updated: 2018/07/06 12:02:42 by pragolan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static char	*strjoin_free(const char *s1, const char *s2, int i_res)
 {
